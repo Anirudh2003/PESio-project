@@ -1,0 +1,116 @@
+<script type="module" src="https://unpkg.com/@google/model-viewer"></script>
+<script src="https://unpkg.com/focus-visible/dist/focus-visible.js" defer></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="https://gitguysu.github.io/3dAnimation_Zombies/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Zombies</a>
+    <a href="https://gitguysu.github.io/3dAnimation_Dragon/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Dragons</a>
+    <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a> -->
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="https://gitguysu.github.io/3dAnimation_Zombies/" class="w3-bar-item w3-button w3-padding-large">Zombies</a>
+    <a href="https://gitguysu.github.io/3dAnimation_Dragon/" class="w3-bar-item w3-button w3-padding-large">Dragons</a>
+    <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a> -->
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+
+  <!-- <p class="w3-xlarge">Template by w3.css</p> -->
+  <a href='https://github.com/Anirudh2003/PESio-project'><button>GitHub Repository</button></a>
+  
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Zombies</h1>
+      <h5 class="w3-padding-32">A zombie is a mythological undead corporeal revenant created through the reanimation of a corpse. Zombies are most commonly found in horror and fantasy genre works. The term comes from Haitian folklore, in which a zombie is a dead body reanimated through various methods, most commonly magic like voodoo. Modern media depictions of the reanimation of the dead often do not involve magic but rather science fictional methods such as carriers, radiation, mental diseases, vectors, pathogens, parasites, scientific accidents, etc.</h5>
+    </div> 
+
+    <!-- <div class="w3-third w3-center">
+      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+    </div> -->
+  </div>
+  <model-viewer src="./Ghoul.glb" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
+  
+    <button slot="ar-button" id="ar-button">
+      View in your space
+    </button>
+  
+    <div id="ar-prompt">
+      <!-- <img src="../../assets/hand.png"> -->
+    </div>
+  </model-viewer>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+
+    <!-- <div class="w3-third w3-center">
+      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+    </div> -->
+
+    <div class="w3-twothird">
+      <h1>Dragons</h1>
+      <h5 class="w3-padding-32">A dragon is a reptile-like legendary creature that appears in the folklore of many cultures worldwide. Beliefs about dragons vary considerably through regions, but dragons in western cultures since the High Middle Ages have often been depicted as winged, horned, four-legged, and capable of breathing fire. Dragons in eastern cultures are usually depicted as wingless, four-legged, serpentine creatures with above-average intelligence. Commonalities between dragons' traits are often a hybridization of feline, avian, and reptilian features.</h5>
+    </div>
+  </div>
+  <model-viewer src="./Dragon.glb" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
+  
+    <button slot="ar-button" id="ar-button">
+      View in your space
+    </button>
+  
+    <div id="ar-prompt">
+      <img src="../../assets/hand.png">
+    </div>
+  </model-viewer>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Peace</h1>
+</div>
+
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
